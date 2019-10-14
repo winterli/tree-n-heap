@@ -1,5 +1,7 @@
 /node_modules
 /coverage
 /test
+/.idea
 demo.js
 test-report.html
+*.tgz

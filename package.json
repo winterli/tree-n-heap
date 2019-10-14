@@ -2,7 +2,7 @@
   "name": "tree-n-heap",
   "version": "0.0.1",
   "description": "",
-  "main": "demo.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib"
   },
