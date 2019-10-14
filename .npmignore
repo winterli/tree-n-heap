@@ -2,6 +2,9 @@
 /coverage
 /test
 /.idea
+/dist
 demo.js
 test-report.html
 *.tgz
+index_browser.js
+*.sh
