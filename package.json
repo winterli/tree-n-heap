@@ -1,0 +1,31 @@
+{
+  "name": "tree-n-heap",
+  "version": "0.0.1",
+  "description": "",
+  "main": "demo.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node demo.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "24.9.0",
+    "jest-html-reporter": "^2.6.0"
+  },
+  "jest": {
+    "verbose": true,
+    "reporters": [
+      "default",
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle": "Test Report"
+        }
+      ]
+    ]
+  },
+  "author": "Winter Li",
+  "license": "MIT"
+}
