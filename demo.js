@@ -41,7 +41,7 @@ function mainForTree_Object(){
 function mainForHeap_Number(){
 
     let heap = new Heap();
-    heap.init([1,2,3,4,5,6], false);
+    heap.init([5,4,6,7,14,9,16,36,44]);
 
     heap.push(10);
     heap.push(23);
@@ -77,11 +77,10 @@ function mainForHeap_Object(){
 
 }
 
-
 function main() {
-    mainForTree_Number();
+    //mainForTree_Number();
     //mainForTree_Object();
-    //mainForHeap_Number();
+    mainForHeap_Number();
     //mainForHeap_Object();
 }
 

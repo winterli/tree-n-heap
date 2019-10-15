@@ -79,11 +79,11 @@ let Heap =function(list, isMinHeap, isObjectMode){
     }
 
     function build(list) {
-        let lv = level(list.length-1)-1;
+        let lv = level(list.length)-2;//start from 2nd last level.
         while(lv >= 0){
             let rg = range(lv);
-            for(let i=rg.start; i<=rg.end; i++){
-                checkChild(i);
+            for(let i=rg.end; i>=rg.start; i--){
+                shiftDown(i);
             }
             lv--;
         }
@@ -93,6 +93,11 @@ let Heap =function(list, isMinHeap, isObjectMode){
         let v = _list[i];
         let l = leftChild(i), r = rightChild(i);
         let c = -1;
+
+        if(l<0 && r<0){
+            return -1;
+        }
+
         if(l>=0 && r>=0){
             c =  hasHigherWeight(_list[l], _list[r]) ? l : r;
         }else if(l>=0)
@@ -100,7 +105,7 @@ let Heap =function(list, isMinHeap, isObjectMode){
         else if(r>=0)
             c = r;
 
-        if(c>=0 && hasHigherWeight(_list[c], v)){
+        if(hasHigherWeight(_list[c], v)){
             swap(i, c);
             return c;
         }else
@@ -145,7 +150,7 @@ let Heap =function(list, isMinHeap, isObjectMode){
     }
 
     function level(i) {
-        return Math.floor(Math.log2(i+1));
+        return Math.ceil(Math.log2(i+1));
     }
 
 
@@ -254,7 +259,7 @@ let Heap =function(list, isMinHeap, isObjectMode){
     }
 
     function getVisualStr(list){
-        let maxLevel = level(list.length-1);
+        let maxLevel = level(list.length);
 		let maxLeafNum = Math.pow(2, maxLevel);
 
 		let maxWidth = maxLeafNum * _VALUE_WIDTH;
