@@ -55,11 +55,11 @@ _test('heap number: search value', ()=>{
 })
 
 _test('heap number: pop', ()=>{
-    let data=[1,2,3,4,5,6];
+    let data=[5,4,6,7,21,9,16,36,44];
     heap.init(data);
 
-    expect(heap.pop()).toBe(6);
-    expect(heap.pop()).toBe(5);
-    expect(heap.pop()).toBe(4);
+    expect(heap.pop()).toBe(44);
+    expect(heap.pop()).toBe(36);
+    expect(heap.pop()).toBe(21);
 })
 
