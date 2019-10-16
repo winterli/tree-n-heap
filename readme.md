@@ -216,12 +216,21 @@ You should get below output in console
 
 ```
 
+#### Peek
+
+Peek will return the root node of the heap, but won't remove it from heap.
+
+```bash
+let n = heap.peek();
+```
+
 #### Search
 
 ```bash
 let n = heap.search(3);
 ```
 > _The returned `n` is the found element._
+
 
 #### Others
 	

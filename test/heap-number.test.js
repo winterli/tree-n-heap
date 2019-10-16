@@ -63,3 +63,11 @@ _test('heap number: pop', ()=>{
     expect(heap.pop()).toBe(21);
 })
 
+_test('heap number: peek', ()=>{
+    let data=[5,4,6,7,21,9,16,36,44];
+    heap.init(data);
+
+    expect(heap.peek()).toBe(44);
+    //peek should return same value even for multiple attempts
+    expect(heap.peek()).toBe(44);
+})

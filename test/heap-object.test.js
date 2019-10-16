@@ -63,3 +63,12 @@ _test('heap object: pop', ()=>{
     expect(heap.pop()).toEqual({key:4, name:'Tom'});
 })
 
+_test('heap object: peek', ()=>{
+    let data=[{key:1, name:'Mike'},{key:2, name:'Peter'},{key:3, name:'Joe'},{key:4, name:'Tom'},{key:5, name:'Leo'},{key:6, name:'Jean'}];
+    heap.init(data, false, true);
+
+    expect(heap.peek()).toEqual({key:6, name:'Jean'});
+    //peek should return same value even for multiple attempts
+    expect(heap.peek()).toEqual({key:6, name:'Jean'});
+})
+

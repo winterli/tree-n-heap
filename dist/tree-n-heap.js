@@ -249,6 +249,13 @@ let Heap =function(list, isMinHeap, isObjectMode){
         }
     }
 
+    function peek() {
+        if(_list == null || _list.length<=0){
+            return null;
+        }
+
+        return _list[0];
+    }
 
     function print() {
         console.log(toString(_list));
@@ -313,6 +320,7 @@ let Heap =function(list, isMinHeap, isObjectMode){
         init,
         push,
         pop,
+        peek,
         search,
         toString,
         print
@@ -546,7 +554,7 @@ let Tree =function(list, isObjectMode){
 		let unbalancedEver = false;
 
 		if(bf > 1 || bf < -1){
-			Util.debug(node.value + ' is not balanced!');
+			//Util.debug(node.value + ' is not balanced!');
 			rotate(node, bf);
 			unbalancedEver = true;
 		}
@@ -825,9 +833,9 @@ class Util{
         }
     }
 
-    static debug(msg) {
+    /*static debug(msg) {
         console.log(msg);
-    }
+    }*/
 
 
     static POSITION(){
