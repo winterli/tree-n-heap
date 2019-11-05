@@ -103,11 +103,11 @@ There are three traversal orders: `PreOrder`, `InOrder` and `PostOrder`. You can
 ```bash
 tree.init([2, 6, 3, 1, 4, 9]);
 let ORDER = tree.CONST.ORDER;
-let result = tree.traversal(ORDER.PreOrder);
+let result = tree.traversal(ORDER.InOrder);
 console.log(result);
 ```
 
-Since it's PreOrder, the result is a sorted array. 
+Since it's InOrder, the result is a sorted array. 
 
 ```bash
 [1, 2, 3, 4, 6, 9]

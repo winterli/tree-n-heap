@@ -59,15 +59,15 @@ _test('number tree: search value', ()=>{
     expect(tree.search(5).value).toBe(5);
 })
 
-_test('number tree: traversal pre-order', ()=>{
-    expect(tree.traversal(ORDER.PreOrder)).toEqual([1,2,3,4,5,6]);
+_test('number tree: traversal in-order', ()=>{
+    expect(tree.traversal(ORDER.InOrder)).toEqual([1,2,3,4,5,6]);
 })
 
-_test('number tree: traversal in-order', ()=>{
-    expect(tree.traversal(ORDER.InOrder)).toEqual([3,1,2,5,4,6]);
+_test('number tree: traversal pre-order', ()=>{
+    expect(tree.traversal(ORDER.PreOrder)).toEqual([3,1,2,5,4,6]);
 })
 _test('number tree: traversal post-order', ()=>{
-    expect(tree.traversal(ORDER.PostOrder)).toEqual([6,5,4,3,2,1]);
+    expect(tree.traversal(ORDER.PostOrder)).toEqual([2,1,4,6,5,3]);
 })
 
 _test('number tree: to JSON', ()=>{

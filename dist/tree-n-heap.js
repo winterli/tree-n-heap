@@ -720,10 +720,10 @@ let Tree =function(list, isObjectMode){
 	function _traversalPreOrder(node) {
 		let result = [];
 		if(node){
+			result.push(node.data);
 			if(node.left){
 				result = result.concat(_traversalPreOrder(node.left));
 			}
-			result.push(node.data);
 			if(node.right){
 				result = result.concat(_traversalPreOrder(node.right));
 			}
@@ -733,10 +733,10 @@ let Tree =function(list, isObjectMode){
 	function _traversalInOrder(node) {
 		let result = [];
 		if(node){
-			result.push(node.data);
 			if(node.left){
 				result = result.concat(_traversalInOrder(node.left));
 			}
+			result.push(node.data);
 			if(node.right){
 				result = result.concat(_traversalInOrder(node.right));
 			}
@@ -746,13 +746,13 @@ let Tree =function(list, isObjectMode){
 	function _traversalPostOrder(node) {
 		let result = [];
 		if(node){
+			if(node.left){
+				result = result.concat(_traversalPostOrder(node.left));
+			}
 			if(node.right){
 				result = result.concat(_traversalPostOrder(node.right));
 			}
 			result.push(node.data);
-			if(node.left){
-				result = result.concat(_traversalPostOrder(node.left));
-			}
 		}
 		return result;
 	}

@@ -59,13 +59,13 @@ _test('object tree: search value', ()=>{
     expect(tree.search(5).data.name).toBe('Leo');
 })
 
-_test('object tree: traversal pre-order', ()=>{
-    expect(tree.traversal(ORDER.PreOrder).map(a=>a.key)).toEqual([1,2,3,4,5,6]);
+_test('object tree: traversal in-order', ()=>{
+    expect(tree.traversal(ORDER.InOrder).map(a=>a.key)).toEqual([1,2,3,4,5,6]);
 })
 
-_test('object tree: traversal in-order', ()=>{
-    expect(tree.traversal(ORDER.InOrder).map(a=>a.key)).toEqual([3,1,2,5,4,6]);
+_test('object tree: traversal pre-order', ()=>{
+    expect(tree.traversal(ORDER.PreOrder).map(a=>a.key)).toEqual([3,1,2,5,4,6]);
 })
 _test('object tree: traversal post-order', ()=>{
-    expect(tree.traversal(ORDER.PostOrder).map(a=>a.key)).toEqual([6,5,4,3,2,1]);
+    expect(tree.traversal(ORDER.PostOrder).map(a=>a.key)).toEqual([2,1,4,6,5,3]);
 })

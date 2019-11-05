@@ -1,6 +1,6 @@
 {
   "name": "tree-n-heap",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple AVL Tree and Max(Min) Heap library which works in both client side and server side with no dependency",
   "keywords": ["tree", "BST", "AVL", "heap", "data structure"],
   "main": "index.js",
